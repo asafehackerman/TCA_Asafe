@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controllers.CadastrarFicha">
+   <children>
+      <Pane fx:id="mainPane" layoutX="0.0" layoutY="0.0">
+         <children>
+            <ImageView fx:id="backgroundImage" pickOnBounds="true">
+               <image>
+                  <Image url="@img/fundo_rpg.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D height="1080.0" width="1920.0" />
+               </viewport>
+            </ImageView>
+            <ImageView fitHeight="954.0" fitWidth="1131.0" layoutX="395.0" layoutY="46.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/GURPS_FICHA.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="image_personagem" fitHeight="496.0" fitWidth="376.0" layoutX="788.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" />
+            <TextField fx:id="nome_personagem" layoutX="738.0" layoutY="68.0" prefHeight="29.0" prefWidth="511.0" promptText="Insira o nome do personagem" />
+            <TextArea fx:id="desc_personagem" layoutX="738.0" layoutY="106.0" prefHeight="47.0" prefWidth="511.0" promptText="Insira informações do personagem, aparência, história, etc ..." />
+            <TableView fx:id="tabela_atributos" layoutX="501.0" layoutY="613.0" prefHeight="327.0" prefWidth="270.0">
+              <columns>
+                <TableColumn fx:id="vantagens" prefWidth="90.0" text="Vantagens" />
+                <TableColumn fx:id="desvantagens" prefWidth="90.0" text="Desvantagens" />
+                <TableColumn fx:id="peculiaridades" prefWidth="90.0" text="Peculiaridades" />
+              </columns>
+            </TableView>
+            <MenuButton fx:id="desvantagens" layoutX="1165.0" layoutY="882.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="310.0" text="Desvantagens">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+               </items>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </MenuButton>
+            <MenuButton fx:id="pericias" layoutX="845.0" layoutY="807.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="310.0" text="Perícias">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+               </items>
+            </MenuButton>
+            <MenuButton fx:id="vantagens" layoutX="845.0" layoutY="882.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="310.0" text="Vantagens">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+               </items>
+            </MenuButton>
+            <TextField fx:id="peculiaridades_field" layoutX="1165.0" layoutY="807.0" prefHeight="59.0" prefWidth="310.0" promptText="Peculiaridades">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TableView fx:id="tabela_pericias" layoutX="1180.0" layoutY="193.0" prefHeight="600.0" prefWidth="280.0">
+              <columns>
+                <TableColumn fx:id="coluna_pericias" minWidth="0.0" prefWidth="180.0" text="Perícias" />
+                <TableColumn fx:id="coluna_pontos" prefWidth="100.0" text="Custo em Pontos" />
+              </columns>
+            </TableView>
+            <Text fx:id="vel_text" layoutX="725.0" layoutY="532.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" textAlignment="CENTER">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="st_text" layoutX="551.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER" wrappingWidth="91.13671875">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="dx_text" layoutX="551.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER" wrappingWidth="91.13671875">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="iq_text" layoutX="570.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER" wrappingWidth="53.90625">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="ht_text" layoutX="570.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="vida_text" layoutX="659.0" layoutY="452.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER" wrappingWidth="111.125">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Text>
+            <Text fx:id="pontos_de_atributo" layoutX="799.0" layoutY="741.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100" textAlignment="CENTER" wrappingWidth="91.13671875">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="pts_total" layoutX="913.0" layoutY="737.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100" textAlignment="CENTER" wrappingWidth="73.13671875">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Text>
+            <Text fx:id="dano_text" layoutX="662.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1D-2" textAlignment="CENTER">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="fadiga_text" layoutX="654.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER" wrappingWidth="120.6015625">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</VBox>
